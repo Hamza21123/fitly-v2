@@ -45,6 +45,15 @@ struct PlanTabView: View {
             .padding()
         }
         .background(Color(.systemGray6).ignoresSafeArea())
+    var body: some View {
+        VStack(spacing: 8) {
+            Text("Plan")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Text("Your training plan will appear here.")
+                .foregroundStyle(.secondary)
+        }
+        .padding()
     }
 }
 
