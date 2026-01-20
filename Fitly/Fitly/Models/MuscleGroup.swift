@@ -11,4 +11,9 @@ enum MuscleGroup: String, Codable, CaseIterable, Hashable {
     case calves
     case fullBody
     case mobility
+    case legs
+    case shoulders
+    case arms
+    case core
+    case glutes
 }
