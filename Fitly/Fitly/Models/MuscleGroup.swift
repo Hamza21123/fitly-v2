@@ -1,6 +1,7 @@
 import Foundation
 
 enum MuscleGroup: String, Codable, CaseIterable, Hashable, Identifiable {
+enum MuscleGroup: String, Codable, CaseIterable, Hashable {
     case chest
     case back
     case shoulders
@@ -38,4 +39,9 @@ enum MuscleGroup: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Mobility"
         }
     }
+    case legs
+    case shoulders
+    case arms
+    case core
+    case glutes
 }
