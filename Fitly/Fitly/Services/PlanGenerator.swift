@@ -6,6 +6,7 @@ struct PlanGenerator {
         for profile: UserProfile,
         calendar: Calendar = .current
     ) -> WeekPlan {
+        let goal = profile.goal
         let goal = profile.goals.first ?? profile.settings.preferredGoal
         let availableExercises = ExerciseLibrary.exercises(for: goal)
         let fallbackExercises = ExerciseLibrary.exercises
@@ -31,6 +32,7 @@ struct PlanGenerator {
                 )
             ]
 
+            let recoveryFocus: [MuscleGroup] = isWeekend ? [.legs, .back] : [.core]
             let recoveryFocus = isWeekend ? [.legs, .back] : [.core]
 
             let dayPlan = DayPlan(
