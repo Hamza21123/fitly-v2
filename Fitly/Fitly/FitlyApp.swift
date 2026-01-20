@@ -1,17 +1,13 @@
-//
-//  FitlyApp.swift
-//  Fitly
-//
-//  Created by Amal Algirsh on 1/19/26.
-//
-
 import SwiftUI
 
 @main
 struct FitlyApp: App {
+    @StateObject private var appState = AppStateViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(appState)
         }
     }
 }
